@@ -1,0 +1,19 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="container my-5">
+        <h3>Nova tarefa</h3>
+        <hr>
+        <div class="mb-3">
+            <label class="form-label" for="titulo" >Título</label>
+            <input formControlName="titulo" type="text" class="form-control" id="titulo">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="descricao" >Descrição</label>
+            <input formControlName="descricao" type="text" class="form-control" id="descricao">
+        </div>
+        <div class="mb-3 form-check">
+            <label class="form-check-label" for="concluida" >concluida</label>
+            <input formControlName="concluida" type="checkbox" class ="form-check-input" id="concluida">
+        </div>
+        <button [disabled]="form.invalid" type="text" class="btn btn-warning">Adicionar</button>
+        
+    </form>
